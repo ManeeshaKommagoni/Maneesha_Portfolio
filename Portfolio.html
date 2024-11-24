@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maneesha Kommagoni, showcasing expertise in UI/UX design, programming, and leadership.">
+    <meta name="keywords" content="Maneesha Kommagoni, Portfolio, UI/UX Design, Web Development, Serve Save Smile">
+    <title>Maneesha Kommagoni Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        .nav_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav_links {
+            display: flex;
+            list-style: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav_links li {
+            margin: 0 15px;
+        }
+
+        .nav_links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .nav_links a:hover {
+            color: #00bcd4;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8em;
+            background: none;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Section Styling */
+        section {
+            margin: 20px 0;
+            padding: 40px 20px;
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .home p {
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #eaeaea;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh; /* Changed to min-height */
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        /* Experience Section */
+        .experience {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh; /* Changed to min-height */
+            text-align: center;
+        }
+
+        .experience h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .experience p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh; /* Changed to min-height */
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #00bcd4;
+        }
+
+        .contact a i {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav_links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav_links.active {
+                display: flex;
+            }
+
+            .nav_links li {
+                margin: 10px 0;
+            }
+
+            .about p, .experience p, .contact p {
+                font-size: 1em;
+                padding: 0 10px; /* Reduce padding for better fit */
+            }
+
+            .gallery img {
+                max-width: 150px; /* Reduce image size in the gallery */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav_bar">
+        <div class="logo">Maneesha</div>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav_links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="home" class="home">
+        <p>Hi</p>
+        <p>I'm Maneesha Kommagoni</p>
+        <p>Welcome to my Portfolio</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a BTech student specializing in Information Technology at Sreenidhi Institute of Science and Technology. I have a strong passion for design and technology, with expertise in UI/UX design using tools like Figma and Canva. Additionally, I am proficient in programming languages such as HTML, CSS, C, Java, and Python. Always eager to learn, I am committed to expanding my skill set and applying it to real-world challenges. Beyond academics, I actively contribute as a social media poster designer for Serve Save Smile Charitable Trust, where I support meaningful causes and community engagement.
+        </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <p>I work as the Designing Head at Serve Save Smile Charitable Trust, leading creative campaigns and producing impactful designs for social media and events.</p>
+        <h3>My Designs:</h3>
+        <div class="gallery">
+            <img src="P1.png" alt="Design 1">
+            <img src="P2.png" alt="Design 2">
+            <img src="P3.png" alt="Design 3">
+            <img src="P4.png" alt="Design 4">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div>
+            <p>Email: maneeshakommagoni005@gmail.com</p>
+        </div>
+        <div>
+            <p> 
+                <a href="https://www.linkedin.com/in/maneesha-kommagoni" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/ManeeshaKommagoni" target="_blank">
+                    <i class="fab fa-github"></i> 
+                </a>
+            </p>
+        </div>
+    </section>
+
+       
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav_links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
